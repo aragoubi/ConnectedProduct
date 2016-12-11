@@ -1,0 +1,26 @@
+{
+    "cordova-sqlite-storage": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-sqlite-storage@2.0.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-sqlite-ext": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-sqlite-ext"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-firebase": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-firebase@~0.1.18"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

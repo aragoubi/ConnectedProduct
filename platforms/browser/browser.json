@@ -1,0 +1,52 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-sqlite-ext": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-firebase": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/cordova-sqlite-storage/www/SQLitePlugin.js",
+            "id": "cordova-sqlite-storage.SQLitePlugin",
+            "pluginId": "cordova-sqlite-storage",
+            "clobbers": [
+                "SQLitePlugin"
+            ]
+        },
+        {
+            "file": "plugins/cordova-sqlite-ext/www/SQLitePlugin.js",
+            "id": "cordova-sqlite-ext.SQLitePlugin",
+            "pluginId": "cordova-sqlite-ext",
+            "clobbers": [
+                "SQLitePlugin"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-firebase/www/firebase-browser.js",
+            "id": "cordova-plugin-firebase.FirebasePlugin",
+            "pluginId": "cordova-plugin-firebase",
+            "clobbers": [
+                "FirebasePlugin"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-sqlite-storage": "1.5.1",
+        "cordova-sqlite-ext": "0.10.2",
+        "cordova-plugin-firebase": "0.1.18"
+    }
+}

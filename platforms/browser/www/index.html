@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+  <!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+   <link rel="stylesheet" type="text/css" href="css/index.css" /> 
+	<script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+	<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+   <!-- <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>	 -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+    <title>Hello World</title>
+</head>
+
+<body>
+    <div class="form">
+
+        <ul class="tab-group">
+            <li class="tab active"><a href="/index.html" >Sign Up</a></li>
+            <li class="tab"><a href= "/login.html"  >Log In</a></li>
+        </ul>
+
+        <div class="tab-content" >
+            <a div id="signup">
+                <h1 class= "logsignin">Sign Up </h1>
+
+                <form action="/" method="post">
+
+                    <div class="top-row">
+                        <div class="field-wrap">
+                            <label>
+								<span class="req"></span>
+							</label>
+                            <input type="text1"id="firstname" placeholder="First name " />
+                        </div>
+
+                        <div class="field-wrap">
+                            <label>
+								<span class="req"></span>
+							</label>
+                            <input type="text2" id="lastname" placeholder="Last name" />
+                        </div>
+                    </div>
+
+                    <div class="field-wrap">
+                        <label>
+							<span class="req"></span>
+						</label>
+                        <input type="email" id="email" placeholder="Email Address" />
+                    </div>
+
+                    <div class="field-wrap">
+                        <label>
+							<span class="req"></span>
+						</label>
+						
+                        <input type="password" id="password" placeholder="set a password" />
+                    </div>
+					
+					
+					
+                    <button type="button" onclick="app.signup()" class="button btn-primary btn-block" />Start</button>
+					</form>
+				
+                		
+            </a>
+
+        </div>
+		
+		
+        <!-- tab-content -->
+    </div>
+    <!-- /form -->
+		
+<script>
+	 /*var myFirebaseRef = new Firebase("https://yalla-2a00a.firebaseio.com");
+	 
+	 myFirebaseRef.set({
+  title: "Hello World!",
+  author: "Firebase",
+  location: {
+    city: "San Francisco",
+    state: "California",
+    zip: 94103
+  }
+});
+
+myFirebaseRef.child("location/city").on("value", function(snapshot) {
+  alert(snapshot.val())});  
+
+myFirebaseRef.child("location/state").on("value", function(snapshot) {
+  alert(snapshot.val())});  */
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC3HgLFNJk2wLHo8s8_FAGiSpWImBszE2s",
+    authDomain: "yalla-2a00a.firebaseapp.com",
+    databaseURL: "https://yalla-2a00a.firebaseio.com",
+    storageBucket: "yalla-2a00a.appspot.com",
+    messagingSenderId: "386783201464"
+  };
+  firebase.initializeApp(config);
+</script>
+
+
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+		
+<script>
+	app.initialize();
+</script>
+		
+		
+
+
+
+	
+</body>
+
+</html>
